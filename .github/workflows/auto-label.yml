@@ -1,0 +1,19 @@
+name: Auto-Label
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const type = context.payload.issue.body.match(/### Type de tâche\n- \[(.)\] (.*)/)[2];
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: [type.toLowerCase()]
+            });

@@ -1,18 +1,45 @@
 ---
-name: Tâche technique
-about: Décrire une tâche à réaliser
-title: "[TÂCHE] "
-labels: enhancement
-assignees: ''
+name: "Tâche technique"
+about: "Template générique pour tout type de projet"
+title: "[MODULE] "
+labels: ""
+assignees: ""
 ---
-### Module
-<!-- Ex: Authentification, RBAC, etc. -->
 
-### Description
-<!-- Détails techniques -->
+### **Type de tâche**
+<!-- Cochez ce qui correspond -->
+- [ ] Backend (API/DB)
+- [ ] Frontend (UI/UX)
+- [ ] DevOps (CI/CD)
+- [ ] Documentation
+- [ ] Test
 
-### Dépendances
-<!-- ID des tâches liées (ex: AUTH-1) -->
+### **Module**
+<!-- Ex: Authentification, Base de données, Paiement, etc. -->
 
-### Estimation (jours)
-<!-- 0.5 | 1 | 2 -->
+### **Description technique**
+<!-- 
+Exemples :
+- Pour du Backend : "Créer endpoint GET /api/users avec pagination"
+- Pour du Frontend : "Implémenter le composant Table avec tri react-table"
+-->
+
+### **Fichiers/Outils concernés**
+<!-- 
+Exemples :
+- Backend : `app/Models/User.php`, `docker-compose.yml`
+- Frontend : `src/components/Table.jsx`, `tailwind.config.js`
+-->
+
+### **Dépendances**
+<!-- IDs des tâches nécessaires avant de commencer : #12, #34 -->
+
+### **Complexité**
+- [ ] 🔴 Haute (Nouvelle feature complexe)
+- [ ] 🟠 Moyenne (Refactoring/Amélioration)
+- [ ] 🔵 Basse (Correctif simple)
+
+### **Checklist de validation**
+- [ ] Code review effectuée
+- [ ] Tests passants (unitaires/e2e)
+- [ ] Documentation mise à jour
