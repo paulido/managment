@@ -1,0 +1,12 @@
+name: Add to Project
+on:
+  issues:
+    types: [opened]
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0
+        with:
+          project-url: "https://github.com/users/paulido/projects/6" # Remplacez par l'URL de votre projet
+          github-token: ${{ secrets.GITHUB_TOKEN }}
